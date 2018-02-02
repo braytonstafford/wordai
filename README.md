@@ -4,7 +4,7 @@ A node interface for WordAI's API.
 
 [![npm](https://img.shields.io/npm/v/wordai.svg)](https://www.npmjs.com/package/wordai)
 [![npm](https://img.shields.io/npm/dt/wordai.svg)](https://www.npmjs.com/package/wordai)
-[![Build Status](https://travis-ci.org/bzarras/newsapi.svg?branch=master)](https://travis-ci.org/braytonstafford/wordai)
+[![Build Status](https://travis-ci.org/braytonstafford/wordai.svg?branch=master)](https://travis-ci.org/braytonstafford/wordai)
 
 WordAI's API allows you to POST an article or block of text and receive back a plain text or JSON formatted WordAI translated (spun) version of your text. Powered by WordAI.com.
 

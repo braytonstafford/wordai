@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="75" column="79" lean-forward="false" selection-start-line="75" selection-start-column="79" selection-end-line="75" selection-end-column="79" />
+            <state relative-caret-position="380">
+              <caret line="84" column="67" lean-forward="true" selection-start-line="84" selection-start-column="67" selection-end-line="84" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -37,26 +37,26 @@
       <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-292">
+            <state relative-caret-position="-123">
               <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="90">
-                <caret line="6" column="119" lean-forward="false" selection-start-line="6" selection-start-column="119" selection-end-line="6" selection-end-column="119" />
+                <caret line="6" column="127" lean-forward="false" selection-start-line="6" selection-start-column="127" selection-end-line="6" selection-end-column="127" />
                 <folding>
-                  <marker date="1517584992518" expanded="true" signature="1235:1345" ph="{...}" />
-                  <marker date="1517584992518" expanded="true" signature="1349:1393" ph="//..." />
-                  <marker date="1517584992518" expanded="true" signature="1406:1727" ph="{&quot;sources&quot;: 'bbc-news,the-verge'...}" />
-                  <marker date="1517584992518" expanded="true" signature="1439:1725" ph="//..." />
-                  <marker date="1517584992518" expanded="true" signature="1746:1931" ph="{...}" />
-                  <marker date="1517584992518" expanded="true" signature="1775:1929" ph="/*...*/" />
+                  <marker date="1517586779011" expanded="true" signature="1242:1352" ph="{...}" />
+                  <marker date="1517586779011" expanded="true" signature="1356:1400" ph="//..." />
+                  <marker date="1517586779011" expanded="true" signature="1413:1734" ph="{&quot;sources&quot;: 'bbc-news,the-verge'...}" />
+                  <marker date="1517586779011" expanded="true" signature="1446:1732" ph="//..." />
+                  <marker date="1517586779011" expanded="true" signature="1753:1938" ph="{...}" />
+                  <marker date="1517586779011" expanded="true" signature="1782:1936" ph="/*...*/" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -117,10 +117,10 @@
       <list>
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/test/test.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -224,12 +224,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517459079959</updated>
-      <workItem from="1517459081253" duration="23981000" />
+      <workItem from="1517459081253" duration="24658000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23981000" />
+    <option name="totallyTimeSpent" value="24658000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -284,36 +284,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="90">
-            <caret line="6" column="119" lean-forward="false" selection-start-line="6" selection-start-column="119" selection-end-line="6" selection-end-column="119" />
-            <folding>
-              <marker date="1517584992518" expanded="true" signature="1235:1345" ph="{...}" />
-              <marker date="1517584992518" expanded="true" signature="1349:1393" ph="//..." />
-              <marker date="1517584992518" expanded="true" signature="1406:1727" ph="{&quot;sources&quot;: 'bbc-news,the-verge'...}" />
-              <marker date="1517584992518" expanded="true" signature="1439:1725" ph="//..." />
-              <marker date="1517584992518" expanded="true" signature="1746:1931" ph="{...}" />
-              <marker date="1517584992518" expanded="true" signature="1775:1929" ph="/*...*/" />
-            </folding>
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="25" lean-forward="true" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-292">
-          <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -328,9 +302,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="75" column="79" lean-forward="false" selection-start-line="75" selection-start-column="79" selection-end-line="75" selection-end-column="79" />
+        <state relative-caret-position="380">
+          <caret line="84" column="67" lean-forward="true" selection-start-line="84" selection-start-column="67" selection-end-line="84" selection-end-column="67" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-123">
+          <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="90">
+            <caret line="6" column="127" lean-forward="false" selection-start-line="6" selection-start-column="127" selection-end-line="6" selection-end-column="127" />
+            <folding>
+              <marker date="1517586779011" expanded="true" signature="1242:1352" ph="{...}" />
+              <marker date="1517586779011" expanded="true" signature="1356:1400" ph="//..." />
+              <marker date="1517586779011" expanded="true" signature="1413:1734" ph="{&quot;sources&quot;: 'bbc-news,the-verge'...}" />
+              <marker date="1517586779011" expanded="true" signature="1446:1732" ph="//..." />
+              <marker date="1517586779011" expanded="true" signature="1753:1938" ph="{...}" />
+              <marker date="1517586779011" expanded="true" signature="1782:1936" ph="/*...*/" />
+            </folding>
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
