@@ -1,6 +1,6 @@
 {
   "name": "wordai",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "NodeJS interface for WordAI API",
   "main": "index.js",
   "scripts": {
