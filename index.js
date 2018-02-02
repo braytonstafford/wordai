@@ -73,7 +73,7 @@ function getDataFromWeb(url, options, cb) {
   if (useCallback && !options.text) return cb(null, { error: "Error: No text specified", status: "Failure" });
   if (!options.text) throw new Error({ error: "Error: No text specified", status: "Failure" });
   return new Promise((resolve, reject) => {
-    let formData = { ...apiOptions, ...options, s: options.text }
+    let formData = Object.assign({}, apiOptions, options, { s: options.text });
     request.post({ url, formData }, (err, res, body) => {
       if (err) {
         console.log('err: ', err, '\nResponse: ', res)
@@ -82,7 +82,7 @@ function getDataFromWeb(url, options, cb) {
       }
       try {
         const data = JSON.parse(body);
-        if (data.status === 'Failure') throw new WordAIError(data.error);
+        if (data.status === 'Failure') throw new WordAIError(data);
         if (useCallback) return cb(null, data);
         return resolve(data);
       } catch (e) {
