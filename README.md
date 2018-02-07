@@ -21,7 +21,9 @@ $ npm install wordai --save
 
 ## Test
 ```shell
-$ API_KEY=<your api key> npm test
+$ export WORDAI_EMAIL=<YOUR_WORDAI_EMAIL>
+$ export WORDAI_KEY=<YOUR_WORDAI_PASSWORD_HASH>
+$ npm test
 ```
 
 ## Example usage of WordAI API
@@ -29,8 +31,8 @@ The spin method support promises and node-style callbacks.
 ```js
 const WordAI = require('wordai');
 const wordai = new WordAI({
-  email: 'YOUR_WORDAI_EMAIL',
-  hash: 'YOUR_WORDAI_PASSWORD_HASH',
+  email: process.env.WORDAI_EMAIL,
+  hash: process.env.WORDAI_KEY,
   output: 'json',
   quality: 'Regular',
 });
