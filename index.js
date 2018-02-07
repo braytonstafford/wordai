@@ -36,7 +36,7 @@ class WordAI {
 class WordAIError extends Error {
   constructor(err) {
     super();
-    this.name = `WordAIError: ${err.code}`;
+    this.name = `WordAI Error: ${err.code}`;
     this.message = err.message;
   }
 }
@@ -70,23 +70,23 @@ function splitArgsIntoOptionsAndCallback (args) {
  */
 function getDataFromWeb(url, options, cb) {
   let useCallback = 'function' === typeof cb;
-  if (useCallback && !options.text) return cb(null, { error: "Error: No text specified", status: "Failure" });
-  if (!options.text) throw new Error({ error: "Error: No text specified", status: "Failure" });
+  if (useCallback && !options.text) return cb(null, { error: "WordAI Error: No text specified", status: "Failure" });
+  if (!options.text) throw new Error({ error: "WordAI Error: No text specified", status: "Failure" });
   return new Promise((resolve, reject) => {
     let formData = Object.assign({}, apiOptions, options, { s: options.text });
     request.post({ url, formData }, (err, res, body) => {
       if (err) {
-        console.log('err: ', err, '\nResponse: ', res)
+        console.log('WordAI Error: ', err, '\nResponse: ', res)
         if (useCallback) return cb(err);
         return reject(err);
       }
       try {
         const data = JSON.parse(body);
-        if (data.status === 'Failure') throw new WordAIError(data);
+        if (data.status === 'Failure') return reject(data.message)// throw new WordAIError(data);
         if (useCallback) return cb(null, data);
         return resolve(data);
       } catch (e) {
-        console.log('e: ', e)
+        console.log('WordAI Error: ', e)
         if (useCallback) return cb(e);
         return reject(e);
       }
