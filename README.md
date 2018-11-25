@@ -8,7 +8,7 @@ A node interface for WordAI's API.
 
 WordAI's API allows you to POST an article or block of text and receive back a plain text or JSON formatted WordAI translated (spun) version of your text. Powered by WordAI.com.
 
-You will need a password hash from [https://wordai.com](https://wordai.com).
+You will need a password hash from [https://wordai.com](https://wordai.com/?ref=hbdd4).
 
 Please look at their [documentation](https://wordai.com/api.php) to see how to use the API. The convenience functions provided by this module
 simply pass their options along as form data to the REST API, so the [documentation](https://wordai.com/api.php)
