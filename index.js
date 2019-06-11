@@ -22,7 +22,7 @@ class WordAI {
     if (!options) throw new Error('No options specified');
     if (!options.quality) throw new Error('No uniqueness quality specified');
     if (!options.email) throw new Error('No email specified');
-    if (!options.hash && !apiOptions.password) throw new Error('Neither a hash nor a password was specified');
+    if (!options.hash && !options.password) throw new Error('Neither a hash nor a password was specified');
     apiOptions = options;
   }
 
