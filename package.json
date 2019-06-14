@@ -1,9 +1,14 @@
 {
   "name": "wordai",
-  "version": "0.0.5",
+  "version": "0.1.8",
   "description": "NodeJS interface for WordAI API",
-  "main": "index.js",
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "unpkg": "dist/index.umd.js",
   "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch",
     "test": "mocha"
   },
   "repository": {
@@ -20,11 +25,11 @@
   },
   "homepage": "https://github.com/braytonstafford/wordai#readme",
   "dependencies": {
-    "bluebird": "^3.5.1",
-    "request": "^2.83.0"
+    "request": "^2.88.0"
   },
   "devDependencies": {
-    "mocha": "^5.0.0",
-    "should": "^13.2.1"
+    "microbundle": "^0.11.0",
+    "mocha": "^5.2.0",
+    "should": "^13.2.3"
   }
 }

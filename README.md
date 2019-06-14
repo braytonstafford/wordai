@@ -10,27 +10,31 @@ WordAI's API allows you to POST an article or block of text and receive back a p
 
 You will need a password hash from [https://wordai.com](https://wordai.com/?ref=hbdd4).
 
-Please look at their [documentation](https://wordai.com/api.php) to see how to use the API. The convenience functions provided by this module
-simply pass their options along as form data to the REST API, so the [documentation](https://wordai.com/api.php)
+Please look at their [documentation](https://wordai.com/?ref=hbdd4/api.php) to see how to use the API. The convenience functions provided by this module
+simply pass their options along as form data to the REST API, so the [documentation](https://wordai.com/?ref=hbdd4/api.php)
 is totally valid. There are some usage examples below to see how these options should be passed in.
 
 ## Add to your project
 ```shell
 $ npm install wordai --save
 ```
+~ OR ~
+```shell
+$ yarn add wordai
+```
 
 ## Test
 ```shell
 $ export WORDAI_EMAIL=<YOUR_WORDAI_EMAIL>
 $ export WORDAI_KEY=<YOUR_WORDAI_PASSWORD_HASH>
-$ npm test
+$ yarn test
 ```
 
 ## Example usage of WordAI API
 The spin method support promises and node-style callbacks.
 ```js
 const WordAI = require('wordai');
-const wordai = new WordAI({
+new WordAI({
   email: process.env.WORDAI_EMAIL,
   hash: process.env.WORDAI_KEY,
   output: 'json',
@@ -38,7 +42,7 @@ const wordai = new WordAI({
 });
 
 // To request some text be process by wordAI
-wordai.spin({
+WordAI.spin({
   text: 'Here is an example.',
 // Other options here:
 //   noNested: 'on',
