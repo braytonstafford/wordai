@@ -9,8 +9,13 @@
   "scripts": {
     "build": "microbundle",
     "dev": "microbundle watch",
-    "test": "mocha"
+    "test": "mocha",
+    "prepare": "npm run test && npm run build"
   },
+  "files": [
+    "lib",
+    "src"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/braytonstafford/wordai.git"
@@ -19,13 +24,14 @@
     "wordai"
   ],
   "author": "Brayton Stafford",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/braytonstafford/wordai/issues"
   },
   "homepage": "https://github.com/braytonstafford/wordai#readme",
   "dependencies": {
-    "request": "^2.88.0"
+    "cross-fetch": "^3.0.4",
+    "form-data": "^2.3.3"
   },
   "devDependencies": {
     "microbundle": "^0.11.0",

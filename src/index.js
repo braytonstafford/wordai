@@ -10,9 +10,9 @@
  * claim to have created any of the facilities provided by WordAI.com.
  */
 
-const request   = require('request');
+const fetch     = require('cross-fetch');
 const wordAiUrl = 'https://wordai.com/users/turing-api.php';
-
+const FormData  = require('form-data');
 
 let apiOptions;
 
@@ -65,24 +65,36 @@ function getDataFromApi(url, options, cb) {
   if (useCallback && !options.text) return cb(null, { error: "WordAI Error: No text specified", status: "Failure" });
   if (!options.text) throw new Error("WordAI Error: No text specified");
   return new Promise((resolve, reject) => {
-    let formData = Object.assign({}, apiOptions, options, { s: options.text });
-    request.post({ url, formData }, (err, res, body) => {
-      if (err) {
-        console.log('WordAI Error: ', err, '\nResponse: ', res)
-        if (useCallback) return cb(err);
-        return reject(err);
-      }
-      try {
-        const data = JSON.parse(body);
-        if (data.status === 'Failure') return reject(data.message)
-        if (useCallback) return cb(null, data);
-        return resolve(data);
-      } catch (e) {
-        console.log('WordAI Error: ', e)
-        if (useCallback) return cb(e);
-        return reject(e);
-      }
-    });
+    let formData = { ...apiOptions, ...options, s: options.text };
+    const getFormData = object => Object.keys(object).reduce((fd, key) => {
+      fd.append(key, object[key]);
+      return fd;
+    }, new FormData());
+    try {
+      fetch(url, {
+        method: 'POST',
+        body: getFormData(formData),
+      })
+      .then(async data => {
+        try {
+          if (data.status === 'Failure') return reject(data.message)
+          if (useCallback) return cb(null, await data.json());
+          return resolve(await data.json());
+        } catch (err) {
+          console.log('WordAI Error: ', err)
+          if (useCallback) return cb(err);
+          return reject(err);
+        }
+      })
+      .catch(e => {
+        console.error("WordAI Error: Failed to fetch API data", e)
+        throw new Error("WordAI Error: Failed to fetch API data")
+      })
+    } catch(err) {
+      console.log('WordAI Error: ', err)
+      if (useCallback) return cb(err);
+      return reject(err);
+    }
   });
 }
 
